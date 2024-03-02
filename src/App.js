@@ -1,5 +1,7 @@
 import "./App.css";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 import useClipboard from "react-use-clipboard";
 import { useState } from "react";
 
@@ -23,9 +25,9 @@ const App = () => {
       <div className="container">
         <h2>Speech to Text Converter</h2>
         <br />
-        <p>
-          A React hook that converts speech from the microphone to text and
-          makes it available to your React components.
+        <p className="intro">
+          A React hook translating spoken words from the microphone into text,
+          seamlessly integrating with React components for immediate usage.
         </p>
 
         <div className="main-content" onClick={() => setTextToCopy(transcript)}>

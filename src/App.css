@@ -1,4 +1,6 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +9,20 @@
 }
 
 html {
-  color: rgb(97, 170, 8);
+  color: rgb(0, 141, 81);
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  background: rgb(97, 170, 8);
+  background: rgb(0, 111, 61);
 }
 
 .container {
   padding: 30px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 h2 {
@@ -30,11 +33,14 @@ h2 {
   font-family: "Merriweather", serif;
   margin-top: -5%;
 }
+
 p {
   max-width: 50rem;
+  margin: 20px auto 70px;
+  font-size: 18px;
+  
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 100px;
+  color: whitesmoke;
 }
 
 .main-content { 
@@ -46,9 +52,9 @@ p {
   position: relative;
   resize: none;
   box-shadow: 0 12px 48px 0px rgb(109 117 141 / 20%);
-  background: rgb(255 255 255);
+  background: whitesmoke;
   border: 0.5px solid rgb(231 233 245);
-  border-radius: 16px;
+  border-radius: 10px;
 }
 .main-content:focus {
   border: 0.3px solid rgb(43, 45, 56, 0.3);
@@ -60,14 +66,16 @@ p,
   font-size: 18px;
   letter-spacing: 1px;
   word-spacing: 2px;
-  line-height: .6;
+  line-height: 1.3;
 }
+
 .btn-style {
   display: flex;
 }
+
 button {
-  /* position: absolute; */
-  background: rgb(75, 157, 36);
+
+  background: rgb(0, 111, 61);
   color: rgb(251, 250, 250);
   border-radius: 6px;
   padding: 16px 32px;
@@ -79,18 +87,34 @@ button {
   position: relative;
   margin-top: -80px;
   cursor: pointer;
-}
-button:focus,
-button:hover {
-  background: rgb(75, 157, 36);
-  box-shadow: 0 5px 30px 0 rgb(59, 142, 20);
+  transition: background-color 0.5s, box-shadow 0.5s;
 }
 
-.counter-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+button:focus,
+button:hover {
+  background: rgb(0, 141, 81);
+  box-shadow: 0 5px 30px 0 rgb(0, 141, 81);
 }
+
+@keyframes buttonHoverAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  animation: buttonHoverAnimation 0.9s ease forwards;
+}
+
+
+
+/* Media Queries for different devices */
 
 @media screen and (max-width: 768px) {
   .container {
@@ -98,27 +122,27 @@ button:hover {
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 13px;
     word-spacing: normal;
     margin-bottom: 40px;
     margin-top: 15px;
   }
 
   .main-content {
-    /*border:1px solid*/
     font-size: 16px;
     word-spacing: normal;
   }
 
   button {
-    padding: 12px 28px;
-    font-size: 16px;
+    padding: 5px 25px;
+    font-size: 10px;
     margin-top: -70px;
   }
+
   .counter-container {
     flex-direction: column;
   }
@@ -127,4 +151,3 @@ button:hover {
     margin-bottom: 0;
   }
 }
-
